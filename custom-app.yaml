@@ -14,9 +14,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    repoURL: https://github.com/Jenik27/k8demo.git
     targetRevision: HEAD
-    path: guestbook
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: guestbook
