@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: customap
+  name: customapp
   namespace: argocd
   annotations:
     notifications.argoproj.io/subscribe.on-deployed.slack: argocd-channel
@@ -19,4 +19,4 @@ spec:
     path: .
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: default
