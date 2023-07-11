@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: node-application  
+  namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-deployed.slack: argocd-channel  #Slack Channel name
+    
+    argocd-image-updater.argoproj.io/image-list: myalias=gcr.io/project01/ms-echoserver:dev     #Write repository name
+    argocd-image-updater.argoproj.io/myalias.pull-secret: pullsecret:argocd/argocd-gcr-secret  # You can remove this annotation if you have already configured the gcr secret and are using the same secret to retrieve all GCR images in your deployments.
+    argocd-image-updater.argoproj.io/myalias.update-strategy: digest #There are several ways to update the image, but I'm using digest.
+    argocd-image-updater.argoproj.io/write-back-method: git  # We don't need the secret as mentioned in argocd doc because we already set it up via argocd console if you're using the same git repo.
+    argocd-image-updater.argoproj.io/git-branch: main 
+    argocd-image-updater.argoproj.io/myalias.force-update: "true"
