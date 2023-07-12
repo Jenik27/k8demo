@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapp-deployment
+  annotations: 
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argocd-channel
   labels:
     app: webapp
 spec:
