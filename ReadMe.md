@@ -39,5 +39,5 @@ spec:
   source:
     path: .
     repoURL: https://github.com/Jenik27/k8demo.git
-    targetRevison: main
+    targetRevision: main
 ```
