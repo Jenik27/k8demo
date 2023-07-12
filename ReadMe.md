@@ -20,3 +20,24 @@ minikube ip
 ```bash
 kubectl logs <pod-name>
 ```
+
+# Application
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: notifapp
+  namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argocd-channel
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: .
+    repoURL: https://github.com/Jenik27/k8demo.git
+    targetRevison: main
+```
