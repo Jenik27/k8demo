@@ -3,11 +3,11 @@ kind: Deployment
 metadata:
   name: webapp-deployment
   annotations: 
-    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argocd-channel
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: test
   labels:
     app: webapp
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: webapp
