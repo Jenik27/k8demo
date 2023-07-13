@@ -4,7 +4,7 @@ metadata:
   name: myapp
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: argocd-channel
+    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: test
 spec:
   destination:
     namespace: default
