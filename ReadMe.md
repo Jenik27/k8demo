@@ -64,3 +64,7 @@ spec:
 
     - name: Authorization
       value: Bearer $webex-token
+
+trigger.on-sync-succeeded: | - description: Application syncing has succeeded
+send: - app-sync-succeeded
+when: app.status.operationState.phase in ['Succeeded']
