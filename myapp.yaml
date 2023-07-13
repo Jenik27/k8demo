@@ -14,3 +14,17 @@ spec:
     path: .
     repoURL: https://github.com/Jenik27/k8demo.git
     targetRevision: main
+  notifications: 
+    - name: argocd-webhook
+      webhook:
+        url: https://webexapis.com/v1/webhooks/incoming/Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNmUyMjI5YjgtMjliYS00YTFkLWFkNzgtMDUyZjNkNGUwMjZk
+        contentType: application/json
+        data: |
+          {
+           "text": "Hello World, {{ .app.metadata.name }}"
+          }
+      when:
+        sync: 
+          status: '*'
+        operation:
+          status: '*'
