@@ -21,6 +21,26 @@ minikube ip
 kubectl logs <pod-name>
 ```
 
+# argocd notifications
+
+1. install notifications and setup a bot with its token
+2. create a secret and apply it to the argocd namespace
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argocd-notifications-secret
+stringData:
+  slack-token: <auth-token>
+```
+
+3. put
+   data:
+   service.slack: |
+   token: $slack-token
+   to your config
+
 # Application
 
 ```yaml
