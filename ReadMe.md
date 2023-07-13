@@ -61,3 +61,6 @@ spec:
     repoURL: https://github.com/Jenik27/k8demo.git
     targetRevision: main
 ```
+
+    - name: Authorization
+      value: Bearer $webex-token
