@@ -4,7 +4,7 @@ metadata:
   name: myapp
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-sync-succeeded.slack: test
+    notifications.argoproj.io/subscribe.on-sync-succeeded.webex: argocd-notifications
 spec:
   destination:
     namespace: default
