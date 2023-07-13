@@ -4,7 +4,7 @@ metadata:
   name: myapp
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-sync-succeeded.webex: argocd-notifications
+    notifications.argoproj.io/subscribe.on-sync-succeeded.webex: jan.tomicek@ais-servis.cz
 spec:
   destination:
     namespace: default
