@@ -8,7 +8,7 @@ metadata:
     notifications.argoproj.io/subscribe.on-sync-failed.argocd-webhook: ""
     notifications.argoproj.io/subscribe.on-health-degraded.argocd-webhook: ""
 spec:
-  desnation:
+  destination:
     namespace: default
     server: https://kubernetes.default.svc
   project: default
