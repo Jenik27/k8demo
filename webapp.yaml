@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        app: webapp
+        app:gyiug webapp
     spec:
       containers:
         - name: webapp
