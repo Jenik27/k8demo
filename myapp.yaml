@@ -3,11 +3,6 @@ kind: Application
 metadata:
   name: myapp
   namespace: argocd
-  # annotations:
-  #   notifications.argoproj.io/subscribe.on-sync-succeeded.argocd-webhook: ""
-  #   notifications.argoproj.io/subscribe.on-sync-unknown.argocd-webhook: ""
-  #   notifications.argoproj.io/subscribe.on-sync-failed.argocd-webhook: ""
-  #   notifications.argoproj.io/subscribe.on-health-degraded.argocd-webhook: ""
 spec:
   destination:
     namespace: default
