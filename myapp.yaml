@@ -1,5 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
-knd: Application
+kind: Application
+ruutkhjkhgk
 metadata:
   name: myapp
   namespace: argocd
