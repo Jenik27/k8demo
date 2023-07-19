@@ -5,6 +5,10 @@ metadata:
   namespace: argocd
   annotations:
     notifications.argoproj.io/subscribe.on-sync-succeeded.webex: ""
+    notifications.argoproj.io/subscribe.on-deployed.webex: ""
+    notifications.argoproj.io/subscribe.on-health-degraded.webex: ""
+    notifications.argoproj.io/subscribe.on-sync-failed.webex: ""
+    notifications.argoproj.io/subscribe.on-sync-running.webex: ""
 spec:
   destination:
     namespace: default
