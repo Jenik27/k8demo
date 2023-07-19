@@ -2,7 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp
-  namesace: argocd
+  namespace: argocd
+  dfgdfshd
   annotations:
     notifications.argoproj.io/subscribe.on-sync-succeeded.webex: ""
     notifications.argoproj.io/subscribe.on-deployed.webex: ""
