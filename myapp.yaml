@@ -4,11 +4,8 @@ metadata:
   name: myapp
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-sync-succeeded.notif-hook: ""
-    notifications.argoproj.io/subscribe.on-deployed.notif-hook: ""
-    notifications.argoproj.io/subscribe.on-health-degraded.notif-hook: ""
-    notifications.argoproj.io/subscribe.on-sync-failed.notif-hook: ""
-    notifications.argoproj.io/subscribe.on-sync-running.notif-hook: ""
+    notifications.argoproj.io/subscribe.on-sync-succeeded.webex: ""
+
 spec:
   destination:
     namespace: default
