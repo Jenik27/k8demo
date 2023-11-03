@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ndapp
+  namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.custom-trigger.webex: e99a0b50-216e-11ee-b10f-17d14750da4d  
+
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: .
+    repoURL: https://github.com/Jenik27/k8demo.git
+    targetRevision: main
+
