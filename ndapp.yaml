@@ -5,7 +5,6 @@ metadata:
   namespace: argocd
   annotations:
     notifications.argoproj.io/subscribe.custom-trigger.webex: e99a0b50-216e-11ee-b10f-17d14750da4d  
-
 spec:
   destination:
     namespace: default
